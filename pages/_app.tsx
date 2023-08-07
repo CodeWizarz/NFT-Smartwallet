@@ -16,14 +16,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       supportedWallets={[
         smartWallet({
           factoryAddress: FACTORY_ADDRESS,
-          thirdwebApiKey: API_KEY,
           gasless: true,
-          personalWallets:[
+          personalWallets: [
             metamaskWallet(),
             localWallet()
           ]
         })
       ]}
+      thirdwebApiKey={API_KEY}  {/* Set the API key here */}
     >
       <ChakraProvider>
         <Navbar />
